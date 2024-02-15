@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to CFIS</title>
+  <style>
+
+    body {
+      padding: 20px;
+    }
+
+    #content {
+      font-family: arial;
+      letter-spacing: 3px;
+      font-size: 72px;
+      /* width: 300px;
+      height: 150px; */      
+      padding: 5%;
+      margin-top: 20px;
+      opacity: 1;
+      transition: opacity 0.5s ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .cta-button {
+        display: inline-block;
+        padding: 15px 30px;
+        margin-top: 20px;
+        font-size: 24px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #fff;
+        background-color: #007BFF;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+  
+    .cta-button:hover {
+        background-color: #0056b3;
+    }
+
+    .text-container {
+        max-width: 70%; /* Adjust as needed */
+    }
+
+    .right-image {
+        max-width: 20%; /* Adjust as needed */
+        padding-right: 50px;
+    }
+
+    .footer {
+        font-family: verdana;
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        text-align: center;
+    }
+
+    .background-img {
+        position: absolute;
+        right: 0%;
+        top: 0%;
+        width: 33%;
+        height: 100%;
+        opacity: 0.2;
+        filter: alpha(opacity=70); /* For IE8 and earlier */
+    }
+
+    .links img {
+        /* Set initial opacity */
+        opacity: 1;
+        /* Add a smooth transition for a gradual change */
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    .links img:hover {
+        opacity: 0.8; /* Adjust the value as needed (0 is fully transparent, 1 is fully opaque) */
+    }
+
+    .small-text {
+        font-size: 16px; /* Adjust the value as needed (0 is fully transparent, 1 is fully opaque) */
+    }
+
+    .small-text img{
+        margin-top: 20px; /* Adjust the value as needed (0 is fully transparent, 1 is fully opaque) */
+    }
+
+    .small-link{
+        font-family: Verdana; /* Adjust the value as needed (0 is fully transparent, 1 is fully opaque) */
+        font-size: 11px;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class='links'>
+
+  <a href="#" onclick="changeContent('Each file can be thought of as if it were a stock on the stock market.')"><img src='icons/sphere_gray2.png' width='25px' alt='link1'></a>
+  <a href="#" onclick="changeContent('The profit or losses of the users vary according to the popularity or relevance of the files they have invested in.')"><img src='icons/sphere_gray2.png' width='25px' alt='link2'></a>
+  <a href="#" onclick="changeContent('That is, the higher the relevance or popularity of a file, the greater will be the user profit.')"><img src='icons/sphere_gray2.png' width='25px' alt='link3'></a>
+  <a href="#" onclick="changeContent('Our goal is to make it increasingly easy for users to invest in files and assets and empower them in the processes.')"><img src='icons/sphere_gray2.png' width='25px' alt='link4'></a>
+  <a href="#" onclick="endSlide();"><img src='icons/sphere_gray2.png' width='25px' alt='link5'></a>
+  <a href="index.html"><img src='icons/sphere_gray2.png' width='25px' alt='home'></a>
+</div>
+
+<div id="content">
+    <div class="text-container">
+        Earn money<br>investing in files
+        <br>
+        <a href="index.php" class="cta-button">Try now</a>
+    </div>    
+</div>
+ 
+<div class='footer'>© Cooperative File Investment System</div>
+
+<script>
+    function changeContent(newContent) {
+      var contentDiv = document.getElementById('content');
+      contentDiv.style.opacity = 0;
+
+      setTimeout(function() {
+        contentDiv.innerHTML = newContent;
+        contentDiv.style.opacity = 1;
+      }, 500); // 500 milliseconds delay for the fade effect
+    }
+
+    // Function to generate a random number between min (inclusive) and max (exclusive)
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
+
+    // Get a random number between 1 and 10
+    var randomNumber = getRandomInt(1, 5);
+
+    // Create an img element with the random image source
+    var imgElement = document.createElement('img');
+    imgElement.src = 'background_img/' + randomNumber + '.jpg';
+    imgElement.classList.add('background-img');
+
+    // Append the img element to the body
+    document.body.appendChild(imgElement);
+
+    function endSlide() {
+        var contents = "<div class='small-text'>Get now our commercial license<br> with lifetime support and updates for only <b>10 USD</b><br><a href='#'><img src='icons/bitcoin.png' width='50px' alt='Bitcoin'></a><br>bc1qcp3e6mfefzy2a695dsh24kal0m7pz4pdhcq56k<br><br> <a href='#'><img src='icons/pix.png' width='50px' alt='Pix'></a><br> cf.is@outlook.com <br><br><a href='#'><img src='icons/paypal.png' width='40px' alt='PayPal'></a><br><a href='https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GUNPJF5TCZ5BJ' target='_blank'>Open link</a><br><br><br><table width='100%'><tr><td><b>Advantages</b><br><br>- profit sharing<br>- investing in files<br>- owning a digital asset<br>- commercial license use  <br>- consulting and support<br>- AI generated content<br>- freelance services<br>- your ads on our software and pages<br>- lifetime updates</td><td valign='top'><b>Social</b><br><br>&nbsp; <a href='https://whatsapp.com/channel/0029VaG3fLvKAwEpm7T0cN26' target='_blank'>Whatsapp</a><br>&nbsp; <a href='https://t.me/cfis1' target='_blank'>Telegram</a><br>&nbsp; <a href='https://twitter.com/cfis_1' target='_blank'>Twitter</a></td><td valign='top'></tr></table><br><a href='terms.html' class='small-link'>Terms of use</a>";
+      
+    // Replace with the actual path to your image
+        changeContent(contents); 
+    }
+
+</script>
+
+</body>
+</html>
