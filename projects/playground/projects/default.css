@@ -1,0 +1,11 @@
+body {
+    padding: 15px;
+}
+
+a {
+    padding-left: 30px;
+}
+
+a:hover {
+    color: #999;
+}
