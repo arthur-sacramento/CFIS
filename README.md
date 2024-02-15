@@ -1,0 +1,1 @@
+The CFIS aims to build modern applications that facilitate users' investments in files. License: You can share and use the software freely, as long as it is not for commercial purposes. If you wish to use it commercially, please contact us.
