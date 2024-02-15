@@ -1,0 +1,37 @@
+<body>
+
+  <div id='view'></div>
+
+<script>
+    // Author: Arthur S. Sacramento. This script enables the creation of a simple gallery by picking random images.
+
+    var maxw = 10;
+
+    function getRandomNumber() {
+        return Math.floor(Math.random() * maxw);
+    }
+
+    function generateImageLink(category, random) {
+        return `<a href='${category}/${random}.jpg' target='_blank'><img src='${category}/${random}.jpg' width='33%'></a>`;
+    }
+
+    var random1 = getRandomNumber();
+    var random2 = getRandomNumber();
+    var random3 = getRandomNumber();
+    var random4 = getRandomNumber();
+    var random5 = getRandomNumber();
+    var random6 = getRandomNumber();
+    var random7 = getRandomNumber();
+
+    var img1 = generateImageLink("img", random1);
+    var img2 = generateImageLink("img", random2);
+    var img3 = generateImageLink("img", random3);
+    var img4 = generateImageLink("img", random4);
+    var img5 = generateImageLink("img", random5);
+    var img6 = generateImageLink("img", random6);
+    var img7 = generateImageLink("img", random7);
+
+    var tableHtml = `<table width='100%'><tr><td valign='top'>${img2}${img3}${img4}${img5}${img6}${img7}</td></tr></table>`;
+
+    document.getElementById("view").innerHTML = tableHtml;
+</script>
